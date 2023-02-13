@@ -2,7 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Edit this to set page title</title>
+    <title>Contact</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Contact Information:</h1>
+      <form action="https://formsubmit.co/yoni1.fili@gmail.com" method="POST">
+        <lablel for="full-name">Full Name</lablel>
+        <input type="text" name="Name" placeholder="Fullname" required />
+        <lablel for="email">Email</lablel>
+        <input type="email" name="Email" placeholder="Email" required />
+        <label for="job">Occupation</label>
+        <select name="Occupation">
+          <option>Student</option>
+          <option>Teaching Asssitant</option>
+          <option>Learning Assistant</option>
+          <option>Professor</option>
+          <option>Other</option>
+        </select>
+        <label for="message">Write Your Message</label>
+        <textarea
+          name="Text"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
 </html>

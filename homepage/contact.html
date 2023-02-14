@@ -4,30 +4,51 @@
     <meta charset="UTF-8" />
     <title>Contact</title>
   </head>
+
   <body>
-    <div class="container">
-      <h1>Contact Information:</h1>
-      <form action="https://formsubmit.co/yoni1.fili@gmail.com" method="POST">
-        <lablel for="full-name">Full Name</lablel>
-        <input type="text" name="Name" placeholder="Fullname" required />
-        <lablel for="email">Email</lablel>
-        <input type="email" name="Email" placeholder="Email" required />
-        <label for="job">Occupation</label>
-        <select name="Occupation">
-          <option>Student</option>
-          <option>Teaching Asssitant</option>
-          <option>Learning Assistant</option>
-          <option>Professor</option>
-          <option>Other</option>
-        </select>
-        <label for="message">Write Your Message</label>
-        <textarea
-          name="Text"
-          placeholder="Write your message here..."
-          required
-        ></textarea>
-        <button type="submit">Send</button>
-      </form>
+    <div>
+      <button><a href="index.html">Homepage</a></button>
+      <button><a href="cv.html">Resume</a></button>
+      <button><a href="contact.html">Contact</a></button>
+    </div>
+    <div>
+      <!-- <h4>Contact me:</h4> -->
+      <p>Fill out the form and send a message:</p>
+      <div>
+        <form action="https://formsubmit.co/yoni1.fili@gmail.com" method="POST">
+          <div>
+            <lablel for="full-name">Full Name</lablel>
+            <br />
+            <input type="text" name="Name" placeholder="Fullname" required />
+          </div>
+          <div>
+            <lablel for="email">Email</lablel>
+            <br />
+            <input type="email" name="Email" placeholder="Email" required />
+          </div>
+          <div>
+            <label for="job">Occupation</label>
+            <br />
+            <select name="Occupation">
+              <option>Student</option>
+              <option>Teaching Asssitant</option>
+              <option>Learning Assistant</option>
+              <option>Professor</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Write Your Message</label>
+            <br />
+            <textarea
+              name="Text"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

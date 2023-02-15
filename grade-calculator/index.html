@@ -7,15 +7,74 @@
     <title>Grade calculator</title>
     <script src="index.js" type="module"></script>
   </head>
+
   <body>
     <div id="grade_calc">
+      <div v-for="homework in homeworks">
+        Home work:
+        <div>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            placeholder="50"
+            value="{{homework}}"
+          />/100
+        </div>
+        <!-- v-model="homeworks" -->
+      </div>
+      <div>{{ homeworks.length }} homeworks:</div>
+      <button @click="addHomework()">Add homework</button>
+      <!-- <input type="number" placeholder="50" required /> /100 *75 -->
+
       <div>
+        <br />
+        <strong>Enter your participation grades below:</strong>
+
+        <div>
+          <br />
+          <div>Studio attendance:</div>
+
+          <input
+            type="number"
+            min="0"
+            max="100"
+            placeholder="50"
+            v-model="participation.studio"
+          />/100
+        </div>
+        <div>Homework feedback:</div>
+        <input
+          type="number"
+          min="0"
+          max="100"
+          placeholder="50"
+          v-model="participation.feedback"
+        />/100
+      </div>
+      <div>General participation:</div>
+      <div>
+        <input
+          type="number"
+          min="0"
+          max="100"
+          placeholder="50"
+          v-model="participation.other"
+        />/100
+      </div>
+      <div>Projected class grade: {{ calculatedGrade }}</div>
+    </div>
+
+    <!-- <div>Projected class grade: {{ calculatedGrade }}</div> -->
+
+    <!-- the code below this line is GIVEN by instructors -->
+    <!-- <div>
         Participation (studio):
         <input v-model="participation.studio" /> / 100
       </div>
       <div>{{ homeworks.length }} homeworks:</div>
       <button @click="addHomework()">Add homework</button>
-      <div>Projected class grade: {{ calculatedGrade }}</div>
-    </div>
+      <div>Projected class grade: {{ calculatedGrade }}</div> -->
+    <!-- </div> -->
   </body>
 </html>

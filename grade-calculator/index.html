@@ -9,30 +9,46 @@
   </head>
 
   <body>
+    <!-- id is used to link index.js(vue.js) code with the current Html. 
+      only the <div id="grade_calc">listed lines of items</div> will inherit the vue.js characters -->
     <div id="grade_calc">
-      <div v-for="homework in homeworks">
-        Home work:
-        <div>
+      <!-- V-for helps to add homework grades to homeworks array -->
+      <div>
+        Home work :
+        <div v-for="(homework, i) in homeworks">
           <input
             type="number"
             min="0"
+            @keyup-enter="homeworks"
             max="100"
             placeholder="50"
-            value="{{homework}}"
-          />/100
+            v-model="homeworks[i]"
+          />from 100
         </div>
-        <!-- v-model="homeworks" -->
+        <!-- <ul v-repeat="homeworks">
+          <li>{{$value}}</li>
+        </ul> -->
+
+        <button @click="homeworks.push(homework)">Add homework</button>
+        <!-- {{homeworks}} -->
+        <!-- <button @click="homeworkAverage()">Submit</button> -->
       </div>
-      <div>{{ homeworks.length }} homeworks:</div>
-      <button @click="addHomework()">Add homework</button>
-      <!-- <input type="number" placeholder="50" required /> /100 *75 -->
+      <!-- v-model="addHomework(homework)" -->
+      <!-- v-model="homeworks" -->
+      <!-- <div>array {{homework}}</div>
+      </div> -->
+
+      <!-- {{ homeworks.length }} allows us to see how many items are added to the array -->
+      <!-- <div>{{ homeworks.length }} homeworks:</div> -->
+      <!-- every time the add homework is clicked it  -->
+
+      <!-- <div v-model="homeworks.homeworkaverage()">Homework Average</div> -->
 
       <div>
         <br />
         <strong>Enter your participation grades below:</strong>
-
         <div>
-          <br />
+          <!-- <br /> -->
           <div>Studio attendance:</div>
 
           <input
@@ -41,27 +57,30 @@
             max="100"
             placeholder="50"
             v-model="participation.studio"
-          />/100
+          />from 100
         </div>
         <div>Homework feedback:</div>
+
         <input
           type="number"
           min="0"
           max="100"
           placeholder="50"
           v-model="participation.feedback"
-        />/100
+        />from 100
+
+        <div>General participation:</div>
+        <div>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            placeholder="50"
+            v-model="participation.other"
+          />from 100
+        </div>
       </div>
-      <div>General participation:</div>
-      <div>
-        <input
-          type="number"
-          min="0"
-          max="100"
-          placeholder="50"
-          v-model="participation.other"
-        />/100
-      </div>
+      <!-- {{participation}} -->
       <div>Projected class grade: {{ calculatedGrade }}</div>
     </div>
 

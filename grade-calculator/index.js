@@ -53,11 +53,6 @@ let app = createApp(
         // alert(this.homeworks.length);
         this.homeworks.push(null);
       },
-      // my modification to the addhomework for trial !
-      // addHomework(homework) {
-      //   alert(this.homeworks.length);
-      //   this.homeworks.push(homework);
-      // },
     },
   },
   "#grade_calc"

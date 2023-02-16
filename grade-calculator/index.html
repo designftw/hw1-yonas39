@@ -8,14 +8,14 @@
     <script src="index.js" type="module"></script>
   </head>
 
-  <body>
+  <body style="margin-left: 75px">
     <!-- id is used to link index.js(vue.js) code with the current Html. 
       only the <div id="grade_calc">listed lines of items</div> will inherit the vue.js characters -->
     <div id="grade_calc">
       <!-- V-for helps to add homework grades to homeworks array -->
       <div>
-        Home work :
-        <div v-for="(homework, i) in homeworks">
+        Enter your Home work Grade :
+        <div v-for="(homework, i) in homeworks" style="margin-left: 15px">
           <!-- <select type="numbers" min="0" max="100"></select> -->
           <input
             type="number"
@@ -26,18 +26,20 @@
           />from 100
         </div>
 
-        <button @click="homeworks.push(homework)">Add homework</button>
-        <!-- <button @keyup.enter="homeworks.push(homework)">Add homework</button> -->
+        <button @click="homeworks.push(homework)" style="margin-left: 15px">
+          Add homework
+        </button>
       </div>
 
       <div>
         <br />
-        <strong>Enter your participation grades below:</strong>
+        Enter your participation grades below: u
         <div>
-          <!-- <br /> -->
-          <div>Studio attendance:</div>
+          <!-- Attendance -->
+          <div style="margin-left: 10px">Studio attendance:</div>
 
           <input
+            style="margin-left: 20px"
             type="number"
             maxlength="3"
             min="0"
@@ -46,9 +48,11 @@
             v-model="participation.studio"
           />from 100
         </div>
-        <div>Homework feedback:</div>
+        <!-- homework feedback -->
+        <div style="margin-left: 10px">Homework feedback:</div>
 
         <input
+          style="margin-left: 20px"
           type="number"
           maxlength="3"
           min="0"
@@ -57,9 +61,11 @@
           v-model="participation.feedback"
         />from 100
 
-        <div>General participation:</div>
+        <!-- participation  -->
+        <div style="margin-left: 10px">General participation:</div>
         <div>
           <input
+            style="margin-left: 20px"
             type="number"
             maxlength="3"
             min="0"
@@ -69,20 +75,9 @@
           />from 100
         </div>
       </div>
-      <!-- {{participation}} -->
+      <!-- Final grade -->
+      <br />
       <div>Projected class grade: {{ calculatedGrade }}</div>
     </div>
-
-    <!-- <div>Projected class grade: {{ calculatedGrade }}</div> -->
-
-    <!-- the code below this line is GIVEN by instructors -->
-    <!-- <div>
-        Participation (studio):
-        <input v-model="participation.studio" /> / 100
-      </div>
-      <div>{{ homeworks.length }} homeworks:</div>
-      <button @click="addHomework()">Add homework</button>
-      <div>Projected class grade: {{ calculatedGrade }}</div> -->
-    <!-- </div> -->
   </body>
 </html>

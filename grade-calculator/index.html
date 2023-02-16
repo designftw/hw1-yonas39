@@ -16,33 +16,19 @@
       <div>
         Home work :
         <div v-for="(homework, i) in homeworks">
+          <!-- <select type="numbers" min="0" max="100"></select> -->
           <input
             type="number"
             min="0"
-            @keyup-enter="homeworks"
             max="100"
             placeholder="50"
             v-model="homeworks[i]"
           />from 100
         </div>
-        <!-- <ul v-repeat="homeworks">
-          <li>{{$value}}</li>
-        </ul> -->
 
         <button @click="homeworks.push(homework)">Add homework</button>
-        <!-- {{homeworks}} -->
-        <!-- <button @click="homeworkAverage()">Submit</button> -->
+        <!-- <button @keyup.enter="homeworks.push(homework)">Add homework</button> -->
       </div>
-      <!-- v-model="addHomework(homework)" -->
-      <!-- v-model="homeworks" -->
-      <!-- <div>array {{homework}}</div>
-      </div> -->
-
-      <!-- {{ homeworks.length }} allows us to see how many items are added to the array -->
-      <!-- <div>{{ homeworks.length }} homeworks:</div> -->
-      <!-- every time the add homework is clicked it  -->
-
-      <!-- <div v-model="homeworks.homeworkaverage()">Homework Average</div> -->
 
       <div>
         <br />
@@ -53,6 +39,7 @@
 
           <input
             type="number"
+            maxlength="3"
             min="0"
             max="100"
             placeholder="50"
@@ -63,6 +50,7 @@
 
         <input
           type="number"
+          maxlength="3"
           min="0"
           max="100"
           placeholder="50"
@@ -73,6 +61,7 @@
         <div>
           <input
             type="number"
+            maxlength="3"
             min="0"
             max="100"
             placeholder="50"

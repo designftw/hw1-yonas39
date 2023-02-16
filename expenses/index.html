@@ -4,55 +4,103 @@
     <meta charset="UTF-8" />
     <title>Edit this to set page title</title>
   </head>
-  <body>
-    <h1>Usability Problem</h1>
-    <div>
-      <article style="margin-left: 100px">
-        <p>Learnablity:</p>
-        <p>Risk</p>
+  <body style="margin-left: 50px">
+    <header>
+      <h1>Usability Problem</h1>
+    </header>
 
-        <!-- <p>
-          Spreadsheet is widely known method to keep track of finanical
-          transactions. Although it is a great tool, its not easily
-          understandable by some users. Inaddition, when the number of input
-          items grow it will become tidious to keep track of activities.
-        </p> -->
-        <p style="margin-left: 100px">
-          Although spreadsheet is a great way of managing financial
-          transactions, In the case of Trinity and Neo Spreadsheet, I observed
-          some usablity problems i.e, learnablity, efficiency and safety.
-          Forexample, if Trinty or Neo have made a mistake on labling an expense
-          correctley then it's not easy to spot the mistake. According to safety
-          aspects of usablity error prevention or immidiate detection are
-          important to reduce the assiciated risk otherwise it could lead to
-          monetary loss. learnablity is also the biggest issue that I have
-          noticed in the Spreadsheet. As seen on the spreadsheet expenses are
-          listed in a random order which makes it difficult to find a certain
-          type of expense, i.e., if the expenses were organized by their
-          alphabetical order or the amount of money it would have been easier to
-          find a certain item quickley. Due to the above mentioned reason we can
-          conclude that the spreadsheet has learniblity and efficiency problems.
+    <div style="margin-left: 75px">
+      <article>
+        <p style="text-indent: 25px">
+          Spreadsheet is one of the way people use to manage their financial
+          transactions. Trinity and Neo also uses Spreadsheet to keep track of
+          their credit card purchase on their joint and individual credit cards.
+          while observing Trinity and Neo's spreadsheet I found some interesting
+          usablity problems associated with Learnablity, efficiency and safety.
+        </p>
+        <p style="text-indent: 25px">
+          Lets look Learnablity first. As an external person looking into their
+          spreadsheet It took me a while to understand the structures of it.
+          Although each column is labled, its not direct and clear for an
+          outsider. They also might get confused whey they look back to it after
+          a while. Besides labeling, the fact items are not ordered in
+          alphabetical order makes it disturbing and difficult to find a
+          specific expense. if the expenses were arranged in a certain order it
+          will help to understand it better. The same problem can also be
+          assesed from efficiency and safetey perspectives.
+        </p>
+
+        <p style="text-indent: 25px">
+          The last but not the least Usability problem observed was safety. if
+          Trinty or Neo have made a mistake on inputing an expense then it's not
+          easy to spot the mistake. From the safety aspect, its crucial to
+          prevent error or spot it quickly before damage happened. If we see the
+          big picture in the aspects big financial companies such a small
+          mistake could lead to a huge financial loss.
         </p>
       </article>
     </div>
+
     <div>
+      <h2>Proposed Solution</h2>
+    </div>
+
+    <div style="margin-left: 75px">
+      <p font-size="25px">
+        <strong><u>Couples Credit Card Log</u></strong>
+      </p>
       <table>
         <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Card Used</th>
         </tr>
         <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
+          <td><input type="date" name="date" /></td>
+          <td>
+            <input
+              type="text"
+              name="description"
+              placeholder="add discription"
+            />
+          </td>
+          <td>
+            <input type="number" min="0" name="amount" placeholder="20" />
+          </td>
+          <td>
+            <select name="card-used">
+              <option value="card1">Leo's - Card to pay joint expense</option>
+              <option value="card1">Leo's - Card to pay Trinity expense</option>
+              <option value="card1">
+                Leo's - Card to pay personal expense
+              </option>
+
+              <option value="card2">
+                Trinity's - Card to pay joint expense
+              </option>
+              <option value="card2">
+                Trinity's - Card to pay Leo's expense
+              </option>
+              <option value="card2">
+                Trinity's - Card to pay personal expense
+              </option>
+
+              <option value="card3">Joint - Card to pay joint expense</option>
+              <option value="card3">Joint - Card to pay Leo's expense</option>
+              <option value="card3">Joint - Card to pay Trinity expense</option>
+            </select>
+          </td>
         </tr>
       </table>
+      <div>
+        <!-- Additional rows can be added as needed using this button -->
+        <button>Add NewLog</button>
+      </div>
+      <div>
+        <!-- the line below will be filled with names and amount that is being payeble to the other person -->
+        <p>The amount___<u>Name_</u>____owes___<u>Name_</u>____: $$$$$$$$$</p>
+      </div>
     </div>
   </body>
 </html>
